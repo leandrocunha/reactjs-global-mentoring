@@ -1,0 +1,15 @@
+p { 
+    color: #FFFFFF;
+    font-size: 20px;
+}
+
+button {
+    background-color: #F65261;
+    border: #F65261 1px solid;
+    border-radius: 4px;
+    color: #FFFFFF;
+    float: right;
+    font-size: 18px;
+    padding: 10px 25px;
+    text-transform: uppercase;
+}

@@ -4,6 +4,8 @@
 
 body {
     background-color: #555555;
+    margin: 0;
+    padding: 0;
 }
 
 .header, .main, .footer {
@@ -26,7 +28,9 @@ body {
     background-color: #424242;
     border: none;
     color: #F65261;
-    padding: 20px 40px;
+    cursor: pointer;
+    font-size: 20px;
+    padding: 16px 36px;
     position: absolute;
     right: 55px;
     top: 20px;
@@ -119,6 +123,11 @@ body {
 .main__movies-list__movie {
     flex: 1;
     margin: 0 50px 45px 0;
+    position: relative;
+}
+
+.main__movies-list__movie:hover .main__movies-list__movie__actions {
+    display: block;
 }
 
 .main__movies-list__movie__cover {
@@ -156,6 +165,35 @@ body {
     top: 0;
 }
 
+.main__movies-list__movie__actions {
+    display: none;
+    position: absolute;
+    right: 20px;
+    top: 20px;
+}
+
+.main__movies-list__movie__actions button {
+    background-color: #232323;
+    border: none;
+    border-radius: 100px;    
+    color: #FFFFFF;
+    cursor: pointer;
+    font-size: 30px;
+    height: 50px;
+    padding: 0;
+    position: relative;
+    margin: 0;
+    width: 50px;
+}
+
+.main__movies-list__movie__actions button span {
+    position: absolute;
+    top: 9px;
+    right: 5px;
+    transform: rotate(90deg);
+}
+
+
 .footer {
     background-color: #424242;
 }
@@ -172,4 +210,41 @@ body {
 .logotype {
     color: #F65261;
     font-weight: normal;
+}
+
+.modal {
+    background-color: rgba(66, 66, 66, .50);
+    display: flex;
+    left: 0;
+    height: 100%;
+    justify-content: center;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 100;
+}
+
+.modal__overlay {
+    background-color: #232323;
+    align-self: center;
+    padding: 25px;
+    width: 695px;
+}
+
+.modal__overlay__header {
+    position: relative;
+}
+
+.modal__overlay__header .close {
+    background-color: transparent;
+    border: none;
+    color: #FFFFFF;
+    font-size: 20px;
+    position: absolute;
+    right: 0;
+    top: 0;
+}
+
+.modal__overlay__body {
+    padding: 0 85px;
 }
